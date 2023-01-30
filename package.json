@@ -1,0 +1,22 @@
+{
+  "name": "buybot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aingkaran/buyBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aingkaran/buyBot/issues"
+  },
+  "homepage": "https://github.com/Aingkaran/buyBot#readme",
+  "dependencies": {
+    "puppeteer": "^19.6.2"
+  }
+}
