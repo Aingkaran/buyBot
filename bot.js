@@ -11,16 +11,12 @@ const givePage=async ()=>{
 const addToCart= async (page)=>{
     await page.goto(product_url);
     await page.waitForSelector("label[for='skuAndSize__28644620']")
-    await page.click("label[for='skuAndSize__28644620']", elem =()=>{
-        elem.click()
-        console.log("clicked")
-    } );
+    await page.click("label[for='skuAndSize__28644620']", elem=>elem.click())
 
     await page.waitForSelector("button[class='ncss-btn-primary-dark btn-lg add-to-cart-btn']");
-    await page.click("button[class='ncss-btn-primary-dark btn-lg add-to-cart-btn']", elem =()=>{
-        elem.click()
-        console.log("clicked")
-    } );
+    await page.evaluate(()=>document.getElementsByClassName('ncss-btn-primary-dark btn-lg add-to-cart-btn')[0].click())
+    await page.waitForSelector("button[class='ncss-btn-primary-dark btn-lg mr3-sm css-1n4ymyz']");
+    await page.evaluate(()=>document.getElementsByClassName('ncss-btn-primary-dark btn-lg mr3-sm css-1n4ymyz')[0].click());
 
 }
 
